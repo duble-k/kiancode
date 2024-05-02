@@ -10,24 +10,49 @@ const Contact = React.forwardRef((props, ref) => {
     });
 
     useEffect(() => {
-        // Initialize EmailJS
-        emailjs.init('TGZ_q8pb1vGAra886');
+        const scriptId = 'recaptcha-script';
 
-        // Check if grecaptcha is available in the window
-        if (window.grecaptcha && typeof window.grecaptcha.ready === 'function') {
-            window.grecaptcha.ready(() => {
-                if (!window.recaptchaRendered) { // Check if reCAPTCHA has been rendered
-                    window.grecaptcha.render('recaptcha-container', {
-                        sitekey: '6LdlVs0pAAAAAOAW2QLUywyFsXGNymcvnq_cYLIZ'
-                    });
-                    window.recaptchaRendered = true; // Set flag that reCAPTCHA is rendered
-                }
-            });
-        } else {
-            console.error("reCAPTCHA not ready");
-        }
+        const loadReCaptchaScript = () => {
+            if (document.getElementById(scriptId)) return;  // Script already added
+
+            const script = document.createElement('script');
+            script.id = scriptId;
+            script.src = "https://www.google.com/recaptcha/api.js?render=explicit";
+            script.async = true;
+            script.defer = true;
+            script.onload = () => initReCaptcha();  // Initialize reCAPTCHA when script is loaded
+            document.body.appendChild(script);
+        };
+
+        const initReCaptcha = () => {
+            // Initialize EmailJS
+            emailjs.init('TGZ_q8pb1vGAra886');
+            
+            if (window.grecaptcha && typeof window.grecaptcha.ready === 'function') {
+                window.grecaptcha.ready(() => {
+                    try {
+                        window.grecaptcha.render('recaptcha-container', {
+                            sitekey: '6LdlVs0pAAAAAOAW2QLUywyFsXGNymcvnq_cYLIZ'
+                        });
+                    } catch(e) {
+                        console.error("Error rendering reCAPTCHA: ", e);
+                    }
+                });
+            } else {
+                console.error("reCAPTCHA not ready");
+            }
+        };
+
+        loadReCaptchaScript();
+
+        return () => {
+            // Cleanup script when component unmounts
+            const script = document.getElementById(scriptId);
+            if (script) {
+                script.remove();
+            }
+        };
     }, []);
-
 
     const handleChange = (e) => {
         const { name, value } = e.target;
@@ -40,7 +65,12 @@ const Contact = React.forwardRef((props, ref) => {
     const handleSubmit = (e) => {
         e.preventDefault();
 
-        const recaptchaResponse = grecaptcha.getResponse();
+        if (!window.grecaptcha) {
+            alert('reCAPTCHA not loaded. Please try again later.');
+            return;
+        }
+
+        const recaptchaResponse = window.grecaptcha.getResponse();
         if (recaptchaResponse.length === 0) {
             alert('Please complete the reCAPTCHA.');
             return;
@@ -50,21 +80,20 @@ const Contact = React.forwardRef((props, ref) => {
             ...formData,
             'g-recaptcha-response': recaptchaResponse
         })
-            .then((result) => {
-                console.log(result.text);
-                alert('Message sent successfully!');
-                setFormData({
-                    name: '',
-                    organization: '',
-                    email: '',
-                    message: ''
-                }
-                );
-                grecaptcha.reset();  // Reset reCAPTCHA after submission
-            }, (error) => {
-                console.log(error);
-                alert('Failed to send message. Please try again.');
+        .then((result) => {
+            console.log(result.text);
+            alert('Message sent successfully!');
+            setFormData({
+                name: '',
+                organization: '',
+                email: '',
+                message: ''
             });
+            window.grecaptcha.reset();  // Reset reCAPTCHA after submission
+        }, (error) => {
+            console.log(error);
+            alert('Failed to send message. Please try again.');
+        });
     };
 
     return (
