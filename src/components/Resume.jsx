@@ -51,7 +51,7 @@ const Resume = React.forwardRef((props, ref) => {
                             </ul>
                         </div>
                         <a
-                            href="https://firebasestorage.googleapis.com/v0/b/kiancode.appspot.com/o/Kian_Karbasy_Resume.pdf?alt=media&token=c7cfeb1e-3d6c-4fc4-b2dc-91454a6b1187"
+                            href="https://firebasestorage.googleapis.com/v0/b/kiancode.appspot.com/o/Kian_Karbasy_Resume.pdf?alt=media&token=f057cd8e-07a0-414e-be06-c06392ed0868"
                             target="_blank"
                             rel="noopener noreferrer" // security measure
                             className="mt-6 btn bg-cyan-400 shadow-lg shadow-cyan-600 text-white hover:bg-cyan-600">
