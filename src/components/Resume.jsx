@@ -73,7 +73,6 @@ const Resume = React.forwardRef((props, ref) => {
                             <p className="text-sm italic">University of Waterloo (Sep 2020 - Dec 2023)</p>
                             <ul className="list-disc list-inside mt-2">
                                 <li>Learned fundamentals of Electrical and Computer engineering, and applied them in the real world.</li>
-                                <li>Did not complete my degree.</li>
                             </ul>
                         </div>
                     </div>
