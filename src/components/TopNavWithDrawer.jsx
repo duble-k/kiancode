@@ -2,7 +2,7 @@ import React, { useState, useEffect } from 'react';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faLinkedin, faGithub } from '@fortawesome/free-brands-svg-icons';
 
-const TopNavWithDrawer = ({ scrollToRef, aboutRef, resumeRef, businessRef, contactRef }) => {
+const TopNavWithDrawer = ({ scrollToRef, aboutRef, resumeRef, adventureRef, businessRef, contactRef }) => {
     const [isOpen, setIsOpen] = useState(false);
 
     // Close drawer when clicking outside of it
@@ -29,7 +29,7 @@ const TopNavWithDrawer = ({ scrollToRef, aboutRef, resumeRef, businessRef, conta
                         <button id="drawerButton" className="text-3xl text-white p-4" onClick={() => setIsOpen(true)}>
                             ≡
                         </button>
-                        <a className="text-2xl font-semibold text-white">MyPortfolio</a>
+                        <a className="text-2xl font-semibold text-white">My Portfolio</a>
                     </div>
                     <div className="flex justify-center items-center">
                         {/* Social Links with Icons */}
@@ -59,6 +59,7 @@ const TopNavWithDrawer = ({ scrollToRef, aboutRef, resumeRef, businessRef, conta
                 <ul className="menu text-white text-2xl p-4 pt-16">
                     <li className="rounded-lg cursor-pointer hover:bg-gray-300" onClick={() => scrollToRef(aboutRef)}>About</li>
                     <li className="rounded-lg cursor-pointer hover:bg-gray-300" onClick={() => scrollToRef(resumeRef)}>Resume</li>
+                    <li className="rounded-lg cursor-pointer hover:bg-gray-300" onClick={() => scrollToRef(adventureRef)}>Adventures</li>
                     <li className="rounded-lg cursor-pointer hover:bg-gray-300" onClick={() => scrollToRef(businessRef)}>Business</li>
                     <li className="rounded-lg cursor-pointer hover:bg-gray-300" onClick={() => scrollToRef(contactRef)}>Contact</li>
                 </ul>

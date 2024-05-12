@@ -24,11 +24,11 @@ const Resume = React.forwardRef((props, ref) => {
 
                         {/* Job 1 */}
                         <div className="mt-4">
-                            <h4 className="font-bold">Software Developer – Web Application Specialist</h4>
+                            <h4 className="font-bold">Business Development Manager</h4>
                             <p className="text-sm italic">Neatco Engineering Services Inc, Waterloo, ON (Apr 2022 – Present)</p>
                             <ul className="list-disc list-inside mt-2">
-                                <li>Developed and launched React.js/Tailwind CSS/Python applications enhancing operational efficiency.</li>
-                                <li>Integrated cloud solutions using GCP/Firebase for improved analytics and process efficiencies with AI.</li>
+                                <li>Successfully transitioned from my role as a Software Developer to develop strategic partnerships.</li>
+                                <li>Helping clients and partners architect solutions with our technology using my years of technical experience.</li>
                             </ul>
                         </div>
 
@@ -50,13 +50,6 @@ const Resume = React.forwardRef((props, ref) => {
                                 <li>Engineered reusable UI components, reducing future development times by 50%.</li>
                             </ul>
                         </div>
-                        <a
-                            href="https://firebasestorage.googleapis.com/v0/b/kiancode.appspot.com/o/Kian_Karbasy_Resume.pdf?alt=media&token=f057cd8e-07a0-414e-be06-c06392ed0868"
-                            target="_blank"
-                            rel="noopener noreferrer" // security measure
-                            className="mt-6 btn bg-cyan-400 shadow-lg shadow-cyan-600 text-white hover:bg-cyan-600">
-                            Full Resume
-                        </a>
                     </div>
                     {/* Resume download button */}
                 </div>
@@ -70,7 +63,7 @@ const Resume = React.forwardRef((props, ref) => {
                         {/* Job 1 */}
                         <div className="mt-4">
                             <h4 className="font-bold">B. ASc - Computer Engineering</h4>
-                            <p className="text-sm italic">University of Waterloo (Sep 2020 - Dec 2023)</p>
+                            <p className="text-sm italic">University of Waterloo</p>
                             <ul className="list-disc list-inside mt-2">
                                 <li>Learned fundamentals of Electrical and Computer engineering, and applied them in the real world.</li>
                             </ul>
