@@ -59,7 +59,7 @@ const TopNavWithDrawer = ({ scrollToRef, aboutRef, resumeRef, adventureRef, busi
                 <ul className="menu text-white text-2xl p-4 pt-16">
                     <li className="rounded-lg cursor-pointer hover:bg-gray-300" onClick={() => scrollToRef(aboutRef)}>About</li>
                     <li className="rounded-lg cursor-pointer hover:bg-gray-300" onClick={() => scrollToRef(resumeRef)}>Resume</li>
-                    <li className="rounded-lg cursor-pointer hover:bg-gray-300" onClick={() => scrollToRef(adventureRef)}>Adventures</li>
+                    <li className="rounded-lg cursor-pointer hover:bg-gray-300" onClick={() => scrollToRef(adventureRef)}>Adventure</li>
                     <li className="rounded-lg cursor-pointer hover:bg-gray-300" onClick={() => scrollToRef(businessRef)}>Business</li>
                     <li className="rounded-lg cursor-pointer hover:bg-gray-300" onClick={() => scrollToRef(contactRef)}>Contact</li>
                 </ul>
