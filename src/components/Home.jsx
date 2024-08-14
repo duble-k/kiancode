@@ -55,7 +55,7 @@ const Home = () => {
             <div className="flex flex-col items-center">
                 <img src="https://firebasestorage.googleapis.com/v0/b/kiancode.appspot.com/o/profile.jpeg?alt=media&token=6205ee9b-4b82-4f36-a825-969b7b5b8bf2" alt="Profile" className="lg:w-64 lg:h-64 w-48 h-48 rounded-full shadow-lg" />
                 <h1 className="text-3xl font-bold mt-4">Hi, this is Kian</h1>
-                <p className="text-xl mt-2">Business Development Manager</p>
+                <p className="text-xl mt-2">Software Developer at Vidyard</p>
             </div>
             <div className="flex flex-col items-center justify-center">
             <p className="text-center mt-6 relative">

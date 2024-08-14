@@ -19,11 +19,11 @@ const About = React.forwardRef((props, ref) => {
                             <h3 className="text-2xl font-semibold">Brief Bio</h3>
                             <p className="mt-4">
                                 I began programming in high school, learning the fundamentals of python for basic web parsing projects.
-                                Fast forward some years, and I've found my passion in algortihms and AI solution architecting.
+                                Fast forward some years, and I've found my passion working in web development and deployment infrastrucutre.
                             </p>
                             <p className="mt-2">
                                 I am lucky that I have found a career path that doesn't really feel like "working", I genuinely enjoy it.
-                                I have successful transitioned from Software Development to a Business Development Manager at Neatco to drive our AI solutions forward.
+                                My journey of continuous learning has just begun, and I am grateful for all the people apart of it.
                             </p>
                         </div>
                     </div>
