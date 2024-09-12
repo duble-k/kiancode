@@ -75,7 +75,7 @@ const Resume = React.forwardRef((props, ref) => {
                             <h4 className="font-bold">B.Sc - Computer Science</h4>
                             <p className="text-sm italic">Wilfrid Laurier Univeristy</p>
                             <ul className="list-disc list-inside mt-2">
-                                <li>Learned fundamentals of programming and algorithm engineering, and applied them in the real world.</li>
+                                <li>Learned fundamentals of programming and algorithm engineering and applied them in the real world.</li>
                             </ul>
                         </div>
 
