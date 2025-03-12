@@ -18,12 +18,10 @@ const About = React.forwardRef((props, ref) => {
                         <div className="rounded-md shadow-md shadow-cyan-400 p-6">
                             <h3 className="text-2xl font-semibold">Brief Bio</h3>
                             <p className="mt-4">
-                                I began programming in high school, learning the fundamentals of python for basic web parsing projects.
-                                Fast forward some years, and I've found my passion working in web development and deployment infrastrucutre.
+                            I began programming in high school, learning the fundamentals of Python for basic web parsing projects. A few years later, I discovered my passion for web development and deployment infrastructure.
                             </p>
                             <p className="mt-2">
-                                I am lucky that I have found a career path that doesn't really feel like "working", I genuinely enjoy it.
-                                My journey of continuous learning has just begun, and I am grateful for all the people apart of it.
+                            I feel fortunate to have found a career path that doesn’t really feel like work—I genuinely enjoy it. My journey of continuous learning is just beginning, and I’m grateful to everyone who has been part of it.
                             </p>
                         </div>
                     </div>
